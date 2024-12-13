@@ -14,25 +14,23 @@
     }
 
     h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 30px;
-  font-weight: 600;
-  display: flex; /* Используйте flexbox */
-  justify-content: center; /* Центрирование */
-  align-items: center; /* Вертикальное центрирование */
-  text-align: center; /* Убедитесь, что текст по центру */
-}
-
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 30px;
+      font-weight: 600;
+      display: flex; /* Используем flexbox */
+      justify-content: center; /* Центрирование */
+      align-items: center; /* Вертикальное центрирование */
+      text-align: center; /* Убедитесь, что текст по центру */
+    }
 
     #search-section {
-  display: flex;
-  justify-content: center; /* Центрирование элементов по горизонтали */
-  align-items: center; /* Центрирование элементов по вертикали */
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
+      display: flex;
+      justify-content: center; /* Центрирование элементов по горизонтали */
+      align-items: center; /* Центрирование элементов по вертикали */
+      gap: 10px;
+      margin-bottom: 30px;
+    }
 
     #search-section input {
       width: 80%;
@@ -122,6 +120,29 @@
       background-color: #d32f2f;
     }
 
+    #load-more-container {
+      display: flex;
+      justify-content: center; /* Центрирует кнопку по горизонтали */
+      margin-top: 20px; /* Отступ сверху */
+    }
+
+    #load-more-button {
+      display: none;
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: white;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 200px; /* Можно установить любую ширину для кнопки */
+    }
+
+    #load-more-button:hover {
+      background-color: #0056b3;
+    }
+
     @media (max-width: 768px) {
       #search-section input {
         width: 90%;
@@ -143,6 +164,11 @@
     </div>
 
     <div id="results" class="row g-4"></div>
+
+    <!-- Обернутый контейнер для кнопки "Загрузить больше" -->
+    <div id="load-more-container">
+      <button id="load-more-button" onclick="loadMoreMovies()">Дагы жүктөө</button>
+    </div>
 
     <div id="details-section">
       <button class="go-back" onclick="goBack()">Кайтуу</button>
